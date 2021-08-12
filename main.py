@@ -15,6 +15,7 @@ if __name__ == "__main__":
     surface.fill((92, 25, 84))
 
     block = pygame.image.load("resources/block.jpg").convert()
+    tile_size = block.get_width()
     block_x = 100
     block_y = 100
 
@@ -22,7 +23,8 @@ if __name__ == "__main__":
     pygame.display.flip()
 
     running = True
-
+# TODO sort current code into snake and game class for oop
+# TODO move methods into classes
     while running:
         for event in pygame.event.get():
             if event.type == KEYDOWN:
@@ -30,21 +32,20 @@ if __name__ == "__main__":
                     running = False
 
                 if event.key == K_UP:
-                    block_y -= 10
+                    block_y -= tile_size
                     draw_block()
 
                 if event.key == K_DOWN:
-                    block_y += 10
+                    block_y += tile_size
                     draw_block()
 
                 if event.key == K_LEFT:
-                    block_x -= 10
+                    block_x -= tile_size
                     draw_block()
 
                 if event.key == K_RIGHT:
-                    block_x += 10
+                    block_x += tile_size
                     draw_block()
 
             elif event.type == QUIT:
                 running = False
-
