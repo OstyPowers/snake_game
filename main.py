@@ -89,6 +89,7 @@ class Game:
         self.apple = Apple(self.surface)
         self.apple.draw()
 
+    # reset positioning
     def reset(self):
         self.snake = Snake(self.surface, 3)
         self.apple = Apple(self.surface)
