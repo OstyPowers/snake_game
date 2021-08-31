@@ -6,8 +6,6 @@ import random
 SIZE = 40
 BACKGROUND_COLOR = (92, 25, 84)
 
-# testing webhook
-
 
 class Apple:
     def __init__(self, parent_screen):
